@@ -85,3 +85,4 @@ gulp.task('watch',function(){
         });
 
 });
+ gulp.task('hello', function() { console.log('hello world'); });
