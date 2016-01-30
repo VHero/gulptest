@@ -1,0 +1,90 @@
+@charset "utf-8";
+body {
+    font-family: "Microsoft Yahei", "Arial", sans-serif;
+    color: #333;
+}
+
+html,
+body,
+p,
+ul,
+li,
+input,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+dt,
+img,
+ol {
+    margin: 0 auto;
+    padding: 0;
+}
+
+form {
+    margin: 0
+}
+
+li {
+    list-style: none;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    font-size: 20px;
+}
+
+img {
+    border: none;
+    vertical-align: top;
+    display: block;
+}
+
+body {
+    min-width: 320px;
+}
+
+a {
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); //去除点击时a标签的阴影
+}
+
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+    -webkit-appearance: none;
+} //iphone下颜色变浅
+
+
+.change(@maxwidth: 0, @minwidth: 0) {
+    @media screen and (max-width: @maxwidth) and (min-width: @minwidth) {
+        html {
+            font-size: @maxwidth/16;
+        }
+    }
+}
+.change(320px);
+.change(360px, 321px);
+.change(375px, 361px);
+.change(384px, 376px);
+.change(414px, 385px);
+.change(480px, 415px);
+.change(540px, 481px);
+.change(600px, 541px);
+.change(640px, 601px);
+@media screen and (max-width: 2560px) and (min-width: 641px) {
+    html {
+        font-size: 40px;
+    }
+    body {
+        width: 640px;
+    }
+}

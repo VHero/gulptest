@@ -86,3 +86,29 @@ gulp.task('watch',function(){
 
 });
  gulp.task('hello', function() { console.log('hello world'); });
+ gulp.task('jquerydemo',function(){
+        var htmlSrc='./src/jquerydemo/*.html',//  **/*.html表示匹配foo.html,a/foo.html,a/b/foo.html,a/b/c/foo.html的文件
+     htmlDst='./dist/jquerydemo';
+    gulp.src(htmlSrc)
+    .pipe(gulp.dest(htmlDst));
+        var cssSrc=['./src/jquerydemo/**/*.css','./src/jquerydemo/**/*.less'];
+    cssDst='./dist/jquerydemo';
+    gulp.src(cssSrc)
+    .pipe(less())
+    .pipe(minifycss())
+    .pipe(gulp.dest(cssDst));
+        var imageSrc=['./src/jquerydemo/**/*.jpg','./src/jquerydemo/**/*.png','./src/jquerydemo/**/*.gif'],
+    imageDst='./dist/jquerydemo';
+    gulp.src(imageSrc)
+    .pipe(imagemin())
+    .pipe(gulp.dest(imageDst));
+        var jsSrc=['./src/jquerydemo/**/*.js'],
+    jsDst='./dist/jquerydemo';
+    gulp.src(jsSrc)
+        // .pipe(jshint())
+        // .pipe(jshint.reporter('default'))
+        // .pipe(concat('main.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest(jsDst))
+
+ })
