@@ -23,4 +23,5 @@ require(["jquery","vquery"],function($,result){
 	result.drag(oDiv);
 	result.picplay();
 	result.movetosrc();
+    result.ajaximg();
 })
