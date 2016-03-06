@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <script src="bootstrap/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap/bootstrap.min.js"></script>
+    <title>JQuery选择器的使用</title>
+    <script>
+    $(function() {
+        $("tr td:first-child").css("color","red");
+        $("th,td").addClass("text-center");
+        $("tr:eq(0)").css("color","#2E6FA7");
+    })
+    </script>
+</head>
+
+<body>
+    <div class="container table-responsive">
+        <table class="table table-bordered ">
+        <thead>
+        	<tr >
+        		<th>选择器</th>
+        		<th>实例</th>
+        		<th>选取</th>
+        	</tr>
+        </thead>
+  			<tr>
+  			<td>*</td>
+  			<td>$("*")</td>
+  			<td>所有元素</td>
+  			</tr>
+  			<tr>
+  				<td>#id</td>
+  				<td>$("#lastname")</td>
+  				<td>id="lastname" 的元素</td>
+  			</tr>
+  			<tr>
+  				<td>element</td>
+  				<td>$("td")</td>
+  				<td>所有td的元素</td>
+  			</tr>
+  			<tr>
+  				<td>.class</td>
+  				<td>$(".firstname")</td>
+  				<td>class="firstname"</td>
+  			</tr>
+  			<tr>
+  				<td>selector1,selector2,...selectorN</td>
+  				<td>$("p,div")</td>
+  				<td>所有p标签和div标签的元素</td>
+  			</tr>
+  			<tr>
+  				<td>ancestor descendant</td>
+  				<td>$("tr td")</td>
+  				<td>tr下的所有td元素</td>
+  			</tr>
+  			<tr>
+  				<td>parent > child</td>
+  				<td>$("tr>td")</td>
+  				<td>tr下子元素td</td>
+  			</tr>
+  			<tr>
+  				<td>prev + next</td>
+  				<td>$("div+p")</td>
+  				<td>匹配所有div后面的p元素</td>
+  			</tr>
+  			<tr>
+  				<td>prev ~ siblings</td>
+  				<td>$("div~div")</td>
+  				<td>匹配所有div的同辈元素div元素</td>
+  			</tr>
+  			<tr>
+  				<td>:first</td>
+  				<td>$("div p:first")</td>
+  				<td>获取div中第一个p元素</td>
+  			</tr>
+  			<tr>
+  				<td>:last</td>
+  				<td>$("p:last")</td>
+  				<td>匹配所有p元素中最后一个元素</td>
+  			</tr>
+  			<tr>
+  				<td>:not</td>
+  				<td>$("input:not(:checked)")</td>
+  				<td>查找所有未选中的input元素</td>
+  			</tr>
+  			<tr>
+  				<td>:odd</td>
+  				<td>$("tr:odd")</td>
+  				<td>查找tr中索引值为奇数的</td>
+  			</tr>
+  			<tr>
+  				<td>:even</td>
+  				<td>$("tr:even")</td>
+  				<td>查找tr中索引值为偶数的</td>
+  			</tr>
+  			<tr>
+  				<td>:eq(index)</td>
+  				<td>$("p:eq(0)")</td>
+  				<td>匹配索引值为0的p元素</td>
+  			</tr>
+  			<tr>
+  				<td>:gt(index)</td>
+  				<td>$("p:gt(0)")</td>
+  				<td>匹配大于0的索引值为p的元素</td>
+  			</tr>
+  			<tr>
+  				<td>:lt(index)</td>
+  				<td>$("p:lt()")</td>
+  				<td>匹配小于0的索引值为p的元素</td>
+  			</tr>
+  			<tr>
+  				<td>:header</td>
+  				<td>$(":header")</td>
+  				<td>匹配h1 h2 h3之类的元素</td>
+  			</tr>
+  			<tr>
+  				<td>:animated</td>
+  				<td>$(":animated")</td>
+  				<td>匹配所有正在执行动画效果的元素</td>
+  			</tr>
+  			<tr>
+  				<td>:focus</td>
+  				<td>$(":focus")</td>
+  				<td>匹配当前所有获取焦点的元素</td>
+  			</tr>
+  			<tr>
+  				<td>:contains(text)</td>
+  				<td>$("div:contains("John")")</td>
+  				<td>查找所有包含 "John" 的 div 元素</td>
+  			</tr>
+  			<tr>
+  				<td>:empty</td>
+  				<td>$("td:empty")</td>
+  				<td>查找所有不包含子元素或者文本的空元素</td>
+  			</tr>
+  			<tr>
+  				<td>:has(selector)</td>
+  				<td>$("div:has(p)")</td>
+  				<td>匹配所有包含p元素的div元素</td>
+  			</tr>
+  			<tr>
+  				<td>:hidden</td>
+  				<td>$("tr:hidden")</td>
+  				<td>匹配所有隐藏的tr元素</td>
+  			</tr>
+  			<tr>
+  				<td>:visible</td>
+  				<td>$("tr:visible")</td>
+  				<td>匹配所有可见的tr元素</td>
+  			</tr>
+  			<tr>
+  				<td>[attribute]</td>
+  				<td>$("div[id]")</td>
+  				<td>查找所有含有 id 属性的 div 元素</td>
+  			</tr>
+  			<tr>
+  				<td>[attribute=value]</td>
+  				<td>$("input[name='newsletter']")</td>
+  				<td>查找所有 name 属性是 newsletter 的 input 元素</td>
+  			</tr>
+  			<tr>
+  				<td>[attribute^=value]</td>
+  				<td>$("input[name^='news']")</td>
+  				<td>查找所有 name 以 'news' 开始的 input 元素</td>
+  			</tr>
+  			<tr>
+  				<td>[attribute$=value]</td>
+  				<td>$("input[name$='letter']")</td>
+  				<td>查找所有 name 以 'letter' 结尾的 input 元素</td>
+  			</tr>
+  			<tr>
+  				<td>[selector1][selector2][selectorN]</td>
+  				<td>$("input[id][name$='man']")</td>
+  				<td>找到所有含有 id 属性，并且它的 name 属性是以 man 结尾的</td>
+  			</tr>
+  			<tr>
+  				<td>:first-child</td>
+  				<td>$("ul li:first-child")</td>
+  				<td>在每个 ul 中查找第一个 li</td>
+  			</tr>
+  			<tr>
+  				<td>:last-child</td>
+  				<td>$("ul li:last-child")</td>
+  				<td>在每个 ul 中查找最后一个 li</td>
+  			</tr>
+  			<tr>
+  				<td>:nth-child</td>
+  				<td>$("ul li:nth-child(2)")</td>
+  				<td>在每个 ul 查找第 2 个li(:nth-child从1开始的，而:eq()是从0算起的！)</td>
+  			</tr>
+
+</table>
+    </div>
+</body>
+
+</html>

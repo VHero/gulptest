@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery的插件</title>
+    <script src="bootstrap/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="css/css.css">
+    <style>
+    *{margin: 0;padding: 0;}
+   ul,li{
+   	list-style: none;
+   }
+    </style>
+</head>
+
+<body>
+    <div class="container container1">
+        <ul class="list-unstyled ul1">
+            <li><img src="image/img1.gif" alt=""></li>
+            <li><img src="image/img2.gif" alt=""></li>
+            <li><img src="image/img3.gif" alt=""></li>
+        </ul>
+        <ol class="list-unstyled ol1">
+            <li class="active"><img src="image/img1.gif" alt=""></li>
+            <li><img src="image/img2.gif" alt=""></li>
+            <li><img src="image/img3.gif" alt=""></li>
+        </ol>
+    </div>
+    <script>
+    (function($) {
+    	
+        $.fn.picPlay = function(options) {
+        	var setting=$.extend({
+    		autoplay:false
+    	},options);
+            var init = {
+                aOlli: $(this).find('ol li'),
+                aUlli: $(this).find('ul li'),
+                iNow: 0,
+                timer: null
+            }
+            init.aOlli.bind("click",function(){
+            	init.iNow = $(this).index();
+                fnFade();
+                clearInterval(init.timer);//点击后清除定时器
+                if(setting.autoplay){
+                	autoPlay();
+                }
+            })
+            if(setting.autoplay){
+            	autoPlay();
+            }
+            function autoPlay() {//自动轮播
+                init.timer = setInterval(function() {
+                    init.iNow++;
+                    init.iNow %= init.aUlli.length;
+                    fnFade();
+                }, 3000);
+            }
+            function fnFade() { //焦点图切换
+                init.aUlli.each(function(i) {
+                    if (i != init.iNow) {
+                        init.aUlli.eq(i).fadeOut().css('zIndex', '1');
+                        init.aOlli.eq(i).removeClass('active');
+                    } else {
+                        init.aUlli.eq(i).fadeIn().css('zIndex', '2');
+                        init.aOlli.eq(i).addClass('active');
+                    }
+                });
+            }
+
+        };
+    })(jQuery);
+    $(".container").picPlay({autoplay:true});
+    </script>
+</body>
+
+</html>
