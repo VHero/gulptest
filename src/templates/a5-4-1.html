@@ -1,0 +1,27 @@
+<ion-view view-title="收货地址" class="a5-4-1">
+    <ion-header-bar align-title="center">
+        <i class="ion-chevron-left button" ng-click="goBack()"></i>
+        <h1 class="title">收货地址</h1>
+        <!-- <a class="ion-android-add button button-clear " ></a> -->
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <div class="address">
+                <p class="name"><span class="username" ng-bind="info.delivery_name"></span><span class="phone" ng-bind="info.delivery_phonenum"></span></p>
+                <p class="area" ng-bind="info.delivery_address"></p>
+                <div class="default-address">
+                   <!--  <label class="item item-checkbox" ng-model="filter.red">
+                        <div class="checkbox checkbox-input-hidden disable-pointer-events checkbox-circle">
+                            <input type="checkbox" class="ng-pristine ng-untouched ng-valid" value="on"><i class="checkbox-icon"></i>
+                        </div>
+                        <div class="item-content disable-pointer-events"><span>默认地址</span></div>
+                    </label> -->
+                    <div class="action">
+                        <!-- <p class="delete">删除</p> -->
+                        <p class="edit" href="#/tab/a5-4" ng-click="edit()" ng-if="info.isEdit">编辑</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-view view-title="我的文章" class="a5-1">
+    <ion-header-bar align-title="center">
+        <i class="ion-chevron-left button" ng-click="goBack()"></i>
+        <h1 class="title">我的文章</h1>
+    </ion-header-bar>
+    <div tabarticle>
+    </div>
+    <ion-content>
+        <p class="message"><i class="icon-11"></i>最新咭星猫情报喜欢就分享给你的好友吧!<a class="icon-edit" href="#/tab/a6"></a></p>
+        <div class="list">
+            <a class="item item-avatar" href="#/tab/a5-1-0/{{lists.id}}" ng-repeat="lists in info.lists">
+                <img ng-src="{{lists.author_id.headimg}}">
+                <p class="author">发布者: <span ng-bind="lists.author_id.nickname"></span></p>
+                <time ng-bind="lists.created_dt"></time>
+                <p class="list-zan"><i class="icon-zan"></i><span ng-bind="lists.like_count"></span></p>
+                <h2 ng-bind="lists.title"></h2>
+                <p class="desc" ng-bind="lists.desc"></p>
+            </a>
+            
+        </div>
+    </ion-content>
+</ion-view>

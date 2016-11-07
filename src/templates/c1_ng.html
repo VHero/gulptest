@@ -1,0 +1,185 @@
+   <ion-view view-title="抽奖活动" class="c1">
+
+  <div tabc>
+    </div>
+  <ion-content>
+	<!--
+        作者：caomingyu8910@sina.com
+        时间：2016-05-05
+        描述：img 用于抽奖内部的图标显示
+    -->
+	<img src="img/tshirt.png" id="tshirt-img" style="display:none;" />
+	<img src="img/2.png" id="sorry-img" style="display:none;" />
+	<img src="img/red.png" id="red-img" style="display:none;" />
+	<img src="img/bookbag.png" id="bookbag-img" style="display:none;" />
+	<img src="img/doll.png" id="doll-img" style="display:none;" />
+
+	<div class="banner">
+		<div class="turnplate">
+			<canvas class="turnitem" id="wheelcanvas" width="422px" height="422px"></canvas>
+			<img class="pointer" src="img/c1_turnplate-pointer.png" />
+		</div>
+		<div class="turnplate_shadow"></div>
+		<!--  	end  -->
+
+		<!--
+作者：caomingyu8910@sina.com
+时间：2016-05-04
+描述：显示抽奖剩余名额
+-->
+		<!--<div class="turnplate_num">-->
+		<!--还有<span>75</span>个名额-->
+		<!--</div>-->
+		<!--  	end  -->
+	</div>
+	<!-- 代码 结束 -->
+	<!--
+作者：caomingyu8910@sina.com
+时间：2016-05-04
+描述：显示抽奖剩余名额
+-->
+
+	<div class="activity">
+		<img src="img/c1_guodu.png" style="width: 100%;" alt="" />
+		<div class="Activity_rule">
+			<b>活动规则</b>
+			<p>
+				活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。 活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。 活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。 活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。
+			</p>
+			<hr />
+			<div class="Activity_rule_style">
+
+				<hr />
+				<div class="Activity_rule_luck">
+					中奖榜单
+
+				</div>
+				<div class="luck_lists">
+					<!--
+
+                    描述：<tr><td>186****8718</td><td>中了咭星坞公仔T恤一件</td><td>2016-6-1</td></tr>
+                -->
+					<ul id="marquee" >
+						<!--<li>-->  <!--备份勿动-->
+						<!--<span class="left">186****8718</span>-->
+						<!--<span class="cent">咭星坞公仔T恤</span>-->
+						<!--<span class="right"> 2016-6-1</span>-->
+						<!--</li>-->
+						<li ng-repeat="winner in winners">
+							<span class="left">{{winner.name}}</span>
+							<span class="cent">1111</span>
+							<span class="right"> 22222-6-1</span>
+						</li>
+
+
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<img src="img/c1_foot.png" style="width: 100%;" style="position: relative; bottom: 1px;" alt="" />
+
+  </ion-content>
+
+</ion-view>
+
+
+
+
+<!-- <div class="c1">
+	作者：caomingyu8910@sina.com
+        时间：2016-05-05
+        描述：img 用于抽奖内部的图标显示
+	<img src="img/tshirt.png" id="tshirt-img" style="display:none;" />
+	<img src="img/2.png" id="sorry-img" style="display:none;" />
+	<img src="img/red.png" id="red-img" style="display:none;" />
+	<img src="img/bookbag.png" id="bookbag-img" style="display:none;" />
+	<img src="img/doll.png" id="doll-img" style="display:none;" />
+
+	<div class="banner">
+		<div class="turnplate">
+			<canvas class="item" id="wheelcanvas" width="422px" height="422px"></canvas>
+			<img class="pointer" src="img/c1_turnplate-pointer.png" />
+		</div>
+		<div class="turnplate_shadow"></div>
+		end
+
+		作者：caomingyu8910@sina.com
+时间：2016-05-04
+描述：显示抽奖剩余名额
+		<div class="turnplate_num">
+		还有<span>75</span>个名额
+		</div>
+		end
+	</div>
+	代码 结束
+	作者：caomingyu8910@sina.com
+时间：2016-05-04
+描述：显示抽奖剩余名额
+
+	<div class="activity">
+		<img src="img/c1_guodu.png" style="width: 100%;" alt="" />
+		<div class="Activity_rule">
+			<b>活动规则</b>
+			<p>
+				活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。 活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。 活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。 活动针对咭星坞会员，每人每天只能抽奖一次，额满即止。
+			</p>
+			<hr />
+			<div class="Activity_rule_style">
+
+				<hr />
+				<div class="Activity_rule_luck">
+					中奖榜单
+
+				</div>
+				<div class="luck_lists">
+					描述：<tr><td>186****8718</td><td>中了咭星坞公仔T恤一件</td><td>2016-6-1</td></tr>
+					<ul id="marquee" >
+						<li>  备份勿动
+						<span class="left">186****8718</span>
+						<span class="cent">咭星坞公仔T恤</span>
+						<span class="right"> 2016-6-1</span>
+						</li>
+						<li ng-repeat="winner in winners">
+							<span class="left">{{winner.name}}</span>
+							<span class="cent">1111</span>
+							<span class="right"> 22222-6-1</span>
+						</li>
+
+
+					</ul>
+
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+	<img src="img/c1_foot.png" style="width: 100%;" style="position: relative; bottom: 1px;" alt="" />
+
+</div>
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

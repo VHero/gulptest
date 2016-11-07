@@ -1,0 +1,57 @@
+ <ion-view view-title="个人资料" class="a5-3">
+ <ion-header-bar align-title="center">
+  <i class="ion-chevron-left button" ng-click="goBack()"></i>
+  <h1 class="title">个人资料</h1>
+</ion-header-bar>
+<div tabinfo>
+	
+</div>
+    <ion-content>
+<div class="list">
+
+  <a class="item item-icon-left" href="javascript:;" >
+    
+    头像<input type="file" id="file"  accept="image/*" capture />
+    <img src="img/a5-3img1.jpg" alt="" class="a5-3img">
+    <i class="ion-ios-arrow-right"></i>
+    <span class="camera"><i class="icon-camera"></i></span>
+  </a>
+
+  <label class="item item-icon-left" >
+    <span>昵称:</span><input type="text" placeholder="" ng-model="info.nickname">
+    <i class="ion-ios-arrow-right"></i>
+  </label>
+
+  <a class="item item-icon-left" ng-click="click_date()" href="javascript:;" >
+    <span>出生日期: <i  ng-bind="info.birthday"></i></span>
+    <i class="ion-ios-arrow-right"></i>
+  </a>
+
+  <a class="item item-icon-left" href="javascript:;" ng-click="click_sex()">
+    
+   <span>性别:<i  ng-bind="info.gender"></i></span>
+    <i class="ion-ios-arrow-right"></i>
+  </a>
+  <label class="item item-icon-left address" >
+    
+   <span>家庭住址:</span><input type="text" placeholder="" ng-model="info.delivery_address">
+    <i class="ion-ios-arrow-right"></i>
+  </label>
+  <label class="item item-icon-left" >
+    <span>职业:</span><input type="text" ng-model="info.profession">
+    <i class="ion-ios-arrow-right"></i>
+  </label>
+  <label class="item item-icon-left" >
+   <span>学历:</span><input type="text" ng-model="info.education">
+    <i class="ion-ios-arrow-right"></i>
+  </label>
+
+</div>
+<div class="btn-wrap">
+  <button class="button button-calm" ng-click="submit()">
+ 确定
+</button>
+</div>
+
+    </ion-content>
+</ion-view>

@@ -1,0 +1,188 @@
+/* @import "base_fs.less";
+.b1-1{
+    padding: 12px 15px;
+
+    header {
+        width: 100%;
+        height: 80px;
+        .icon {
+            width: 23%;
+            display: inline-block;
+            text-align: center;
+            margin-right: 2%;
+            img {
+                width: 68px;
+                height: 68px;
+                border-radius: 100%;
+            }
+        }
+        .center {
+            display: inline-block;
+            width: 72%;
+            position: absolute;
+            height: 80px;
+            .left {
+                display: inline-block;
+                height: 80px;
+                width: 67%;
+                color: #333333;
+                .top {
+                    margin-top: 13px;
+                    color: #333333;
+                    span{
+                        font-size: @fs_sub_title;
+                    }
+                }
+                .button {
+                    margin-top: 14px;
+                    font-size: 0.9*18px;
+                    color: #999999;
+                }
+            }
+            .right {
+                display: inline-block;
+                display: inline-block;
+                width: 26%;
+                font-size: @fs_date;
+                color: #999999;
+                position: absolute;
+                top: 16px;
+                text-align: center;
+            }
+        }
+    }
+    .content {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        .title {
+            text-align: center;
+            color: #333333;
+            font-size: @fs_title;
+            margin: 4% 0;
+        }
+        .info {
+            color: #666666;
+            line-height: 1.8*18px;
+            font-size: @fs_body;
+        }
+        .border_style {
+            border-top: 1px solid #efefef;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding-top: 5%;
+            text-align: center;
+            .cool {
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                background-color: #24c2e8;
+                border-radius: 50%;
+                margin: auto;
+                text-align: center;
+                color: #ffffff;
+                border: 1px solid #18a8cd;
+                img {
+                    width: 34%;
+                    margin-top: 11px;
+                }
+            }
+            .cool2{
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                background-color: #2480e8;
+                border-radius: 50%;
+                margin: auto;
+                text-align: center;
+                color: #ffffff;
+                border: 1px solid #18a8cd;
+                img {
+                    width: 34%;
+                    margin-top: 11px;
+                }
+            }
+        }
+    }
+    footer{
+        border-top:10px solid #efefef ;
+        text-align: center;
+        width: 100%;
+        p{
+            margin: 5% 0;
+            font-size: @fs_btn;
+        }
+        img{
+            width: 35%;
+        }
+    }
+}
+ */
+@import "base_fs.less";
+.b1-1{
+    .detail-page;
+    ion-content{
+        h2{
+            font-size: @fs_article_title;
+            color: #6c6c6c;
+            padding: 0 0.28rem;
+            margin-bottom: 0;
+            margin-top: 0.5rem;
+        }
+        .author{
+            padding: 0 10px;
+            margin-top: 0.39rem;
+            margin-bottom: 0;
+            padding-bottom: 0.25rem;
+            font-size: 0.31rem;
+            color: #b2b2b2;
+            display: flex;
+            justify-content:space-between;
+            border-bottom: 1px solid #e6e6e6;
+            i{
+                font-weight: normal;
+            }
+            .ion-ios-eye-outline{
+                font-size: 18px;
+            }
+            .icon-zan{
+
+                font-size: 18px;
+            }
+            .number:first-child{
+                margin-right: 4px;
+            }
+            span:last-child{
+                    display: flex;
+    align-items: center;
+            }
+        }
+        .article{
+            padding: 0.53rem 0.28rem;
+            p{
+                line-height: @line_height;
+                font-size: @fs_body;
+            }
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .erweima-wrap{
+            margin:  0.31rem 0.28rem;
+            padding:  0.44rem 0;
+            background: #e3f8ff;
+            display: flex;
+            align-items:center;
+            .erweima{
+                width: 2.96rem;
+                height: 2.96rem;
+                margin-left: 0.5rem;
+            }
+            .title{
+                margin-left: 0.76rem;
+                font-size: 14px;
+                color: #6c6c6c;
+                line-height: 0.69rem;
+            }
+        }
+    }
+}

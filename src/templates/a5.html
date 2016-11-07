@@ -1,0 +1,53 @@
+ <ion-view view-title="个人中心" class="a5">
+
+  <div taba>
+</div>
+  <ion-content>
+  <div class="personal-wrap">
+  	<section class="personal">
+  			<img ng-src="{{info.headimg}}" alt="" class="a5img1">
+  			<p class="personal-info">
+  				<span class="name" ng-bind="info.nickname"></span>
+  				<span class="score"><i class="icon-gold"></i>积分:<i ng-bind="info.reward_points"></i></span>
+  			</p>
+
+  		</section>
+  		
+  </div>
+  <div class="wrap">
+  			<a class="my-article" href="#/tab/a5-1">
+  				<i class="icon-edit"></i>
+  				<span>我的文章</span>
+  				<span>育儿宝典、分享心得</span>
+  			</a>
+  			<a class="my-friend" href="#/tab/a5-2">
+  				<i class="icon-adduser02"></i>
+  				<span>我邀请的好友</span>
+  				<span>活动、权益</span>
+  			</a>
+  		</div>
+  		<div class="list setting">
+
+  <a class="item item-icon-left" href="#/tab/a5-3"">
+    <i class="icon icon-addressbook"></i>
+    个人资料
+    <i class="ion-ios-arrow-forward"></i>
+  </a>
+
+  <a class="item item-icon-left" href="#/tab/a5-4-1">
+    <i class="icon icon-address"></i>
+    收货地址
+    <i class="ion-ios-arrow-forward"></i>
+  </a>
+
+  <a class="item item-icon-left" href="#">
+    <i class="icon icon-customerservice"></i>
+    客服电话
+    <span class="item-note">0731-8898-8101</span>
+    <i class="ion-ios-arrow-forward"></i>
+  </a>
+</div>
+  		
+  </ion-content>
+
+</ion-view>

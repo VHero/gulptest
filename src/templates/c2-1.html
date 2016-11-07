@@ -1,0 +1,29 @@
+ <ion-view view-title="我的奖赏" class="c2-1">
+  <div tabc>
+    </div>
+    <div tabaward></div>
+  <ion-content>
+    <div class="award-list">
+            <div class="ticket" ng-repeat="rewards in rewards.lists">
+                <div class="left">
+                    <div class="son1">
+                        <p class="title">六一幸运大转盘</p>
+                        <p>恭喜您！</p>
+                        <p>获得 <span ng-bind="rewards.on_reward_id.name"></span></p>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="son2">
+                        <div class="son3">
+                            <p>已经过期</p>
+                        </div>
+                        <p class="deadline">2016-10-01过期</p>
+                    </div>
+                </div>
+            </div>
+            <ion-infinite-scroll on-infinite="rewards.loadMore()" distance="1%" ng-if="!rewards.domore">
+            </ion-infinite-scroll>
+        </div>
+  </ion-content>
+
+</ion-view>

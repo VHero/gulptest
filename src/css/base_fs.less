@@ -1,0 +1,696 @@
+@fs_header: .25rem; //页面首标题
+@fs_title: 0.36rem; //最新情报列表页的中标题
+@fs_sub_desc: 0.33rem; //列表页的描述
+@fs_author: 0.33rem; //列表页作者
+@fs_date: 0.28rem; //列表页时间
+@fs_list_title: 0.33rem; //列表页标题
+@fs_article_title: 0.33rem; //内容页标题
+@fs_body: 0.31rem; //内容页文章主体
+@line_height: 0.56rem; //内容页行高（base）
+@fs_author_name: 0.36rem; //内容页作者
+@fs_pingtai_title: 0.33rem; //内容页中平台介绍的标题
+@fs_pingtai_body: 0.28rem; //平台介绍的文字大小
+@fs_pingtai_line_height: 0.49rem; //平台介绍的行高
+@fs_sub_title: .22rem; //保留字段
+@fs_btn: .25rem; //按钮标题
+@fs_smaile_btn: .1rem; //小形提示
+@time_color: #979797; //时间的颜色
+@fs_list_message: 0.36rem; //提示消息的字体
+// 内容页的后退及分享按钮样式
+.detail-page() {
+    ion-header-bar {
+        background: #53d4fe;
+        .button {
+            background-color: transparent;
+            font-size: 24px;
+            color: #fff;
+        }
+        .ion-android-add {
+            font-size: 30px!important;
+            color: #fff;
+        }
+        h1 {
+            color: #fff;
+        }
+        .share {
+            display: flex;
+            align-items: center;
+            display: none;
+            span {
+                margin-right: 0.05rem;
+                display: inline-block;
+                width: 6px;
+                height: 6px;
+                border-radius: 100%;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+// 提示消息的公共样式 
+.information () {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    background-color: #fff;
+    font-size: @fs_list_message;
+    height: 1.11rem;
+    border-bottom: 1px solid #d7d6db;
+    -moz-box-shadow: 0px 1px 3px #e2e1e7;
+    -webkit-box-shadow: 0px 1px 3px #e2e1e7;
+    box-shadow: 0px 1px 3px #e2e1e7;
+    .icon-11 {
+        color: #53d4ff;
+        font-size: 0.46rem;
+        margin-left: 0.47rem;
+        margin-right: 0.42rem;
+    }
+    .icon-edit {
+        color: #c2c2c2;
+        font-size: 0.78rem;
+        position: absolute;
+        right: 0.53rem;
+    }
+}
+
+// 列表公共样式:我的文章下面的各个栏目
+// 专家指导列表栏目样式
+.list() {
+    background: #efeff4;
+    .item {
+        margin-bottom: 4px;
+        border-width: 0;
+    }
+    .item:last-child {
+        margin-bottom: 0;
+    }
+    .item-avatar {
+        padding-left: 16px;
+    }
+    .item-avatar>img:first-child {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    time {
+        font-size: @fs_date;
+        color: @time_color;
+        padding-left: 65px;
+        margin-top: 0.22rem;
+        display: block;
+    }
+    .author {
+        color: #6c6c6c;
+        padding-left: 65px;
+        font-size: @fs_author;
+    }
+    .list-zan {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        align-items: center;
+        i {
+            color: #cccccc;
+            font-size: 0.64rem;
+        }
+        span {
+            color: #939393;
+            font-size: 0.28rem;
+        }
+    }
+    h2 {
+        color: #6c6c6c;
+        font-size: @fs_list_title;
+        margin-top: 0.42rem;
+    }
+    .desc {
+        font-size: @fs_body;
+        color: #6c6c6c;
+        overflow: visible;
+        text-overflow: clip;
+        white-space: normal;
+        margin-top: 0.38rem;
+        line-height: 0.58rem;
+    }
+}
+
+// 我的文章：育儿心得、亲子游、妈妈想知道公共样式 
+.myarticle() {
+    .detail-page;
+    ion-content {
+        .message {
+            .information;
+        }
+        .list {
+            .list;
+            .item {
+                border-width: 0px;
+                border-bottom: 1px solid #ddd;
+            }
+        }
+    }
+}
+
+// b3 b4 b5列表页公共的样式
+.list-public() {
+    ion-content {
+        .message {
+            .information;
+        }
+        .list {
+            background: #efeff4;
+            .item {
+                margin-bottom: 4px;
+                border-width: 0;
+            }
+            .item:last-child {
+                margin-bottom: 0;
+            }
+            .item-avatar {
+                padding-left: 16px;
+            }
+            time {
+                font-size: 12px;
+                color: @time_color;
+                padding-left: 52px;
+            }
+            .author {
+                color: #6c6c6c;
+                padding-left: 52px;
+            }
+            .list-zan {
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                display: flex;
+                align-items: center;
+                i {
+                    color: #cccccc;
+                    font-size: 24px;
+                }
+                span {
+                    color: #939393;
+                }
+            }
+            h2 {
+                color: #6c6c6c;
+                font-size: @fs_title;
+            }
+            .desc {
+                font-size: @fs_body;
+                color: #6c6c6c;
+                overflow: visible;
+                text-overflow: clip;
+                white-space: normal;
+            }
+        }
+    }
+}
+
+// b3 b4 b5 a5-1-0 内容页的公共样式 
+.article-detail() {
+    .detail-page;
+    ion-content {
+        background: #efeff4;
+    }
+    .article-content {
+        background: #fff;
+        padding: 16px;
+        .author {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            img {
+                max-width: 2rem;
+                max-height: 2rem;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+            }
+            .right {
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                .name {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    flex: 1;
+                    margin: 0 0 0 10px;
+                    .publisher {
+                        margin-bottom: 0;
+                        font-size: @fs_author_name;
+                    }
+                    .baby {
+                        margin: 0;
+                        display: flex;
+                        height: 0.47rem;
+                        line-height: 0.47rem;
+                        visibility: hidden;
+                        i {
+                            border-radius: 12px;
+                            background: #eeeeee;
+                            color: #9e9e9e;
+                            font-size: 0.28rem;
+                            text-align: center;
+                        }
+                        i:first-child {
+                            width: 1.04rem;
+                            margin-right: 0.1rem;
+                        }
+                        i:last-child {
+                            width: 2.14rem;
+                        }
+                    }
+                }
+                .date-delete {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    time {
+                        font-size: @fs_date;
+                        align-self: flex-end;
+                        color: @time_color;
+                        height: 0.47rem;
+                        line-height: 0.47rem;
+                    }
+                    .delete {
+                        font-size: 0.31rem;
+                        align-self: flex-end;
+                    }
+                }
+            }
+        }
+        h2 {
+            font-size: 0.39rem;
+            margin-top: 0.36rem;
+            margin-bottom: 0.31rem;
+        }
+        .article-wrap {
+            p {
+                font-size: 0.33rem;
+                line-height: 0.58rem;
+            }
+        }
+    }
+    .info-content {
+        margin-top: 8px;
+        background-color: #fff;
+        padding: 0.39rem 0.56rem;
+        font-size: @fs_body;
+        .info-title {
+            font-size: @fs_pingtai_title;
+            font-weight: bold;
+            color: #6c6c6c;
+        }
+        .info-article {
+            p {
+                line-height: @fs_pingtai_line_height;
+                font-size: @fs_pingtai_body;
+            }
+        }
+        .erweima {
+            display: block;
+            margin: 0.56rem auto 0;
+            width: 2.8rem;
+            height: 2.8rem;
+        }
+        .subinfo {
+            text-align: center;
+            display: block;
+            font-size: 0.28rem;
+            width: 2.8rem;
+            line-height: 0.52rem;
+            min-width: 120px;
+            margin: 0.1rem auto 0;
+        }
+    }
+}
+
+// 发布文章下的三个栏目的公共样式
+.publish() {
+    background: #efeff4;
+    .detail-page;
+    .wrap {
+        margin: 0 0.28rem;
+        .age-choice {
+            margin-top: 0.19rem;
+            margin-bottom: 0.28rem;
+            display: flex;
+            justify-content: space-between;
+            p {
+                margin-bottom: 0;
+                display: flex;
+                width: 1.81rem;
+                height: 0.69rem;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid #dcdcdd;
+                border-radius: 20px;
+                font-size: 0.36rem;
+                color: #b3b3b3;
+            }
+            .active {
+                color: #53d4fe;
+                border: 1px solid #53d4fe;
+            }
+        }
+        .article-wrap {
+            width: 100%;
+            /*富文本编辑器开始*/
+            .ta-toolbar {
+                display: none;
+                // 隐藏了标签选择
+            }
+            .ta-scroll-window > .ta-bind {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0.42rem 0.28rem;
+                resize: none;
+                background: #fff;
+                min-height: 3.8rem;
+            }
+            .ta-scroll-window > .ta-bind::-webkit-input-placeholder {
+                color: #999;
+            }
+            .popover {
+                display: none;
+            }
+            /*富文本编辑器结束*/
+            .title {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0.64rem 0.28rem 0.42rem;
+            }
+            .line {
+                border-top: 1px solid #d7d7d7;
+                margin: 0 0.14rem;
+            }
+            .article-content {
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0.42rem 0.28rem;
+                resize: none;
+                background: #fff;
+                min-height: 3.8rem;
+            }
+            .addimg {
+                background: #fff;
+                box-sizing: border-box;
+                width: 100%;
+                padding: 0.28rem 0.28rem;
+                span {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 1.67rem;
+                    height: 1.67rem;
+                    border: 1px dashed #cbcbcb;
+                    i {
+                        font-size: 0.78rem;
+                        color: #969696;
+                    }
+                }
+            }
+        }
+        .btn-wrap {
+            margin-top: 10px;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 0.28rem 0.14rem 0.28rem;
+            background: #fff;
+            .button {
+                font-size: 0.42rem;
+                background: #53d4fe;
+                margin: 0 auto;
+                display: block;
+                width: 4.56rem;
+                height: 1.11rem;
+            }
+            .attention {
+                font-size: 0.28rem;
+                text-align: center;
+                margin-top: 0.14rem;
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+// 添加个人资料样式
+.add-info() {
+    .detail-page;
+    ion-content {
+        background: #efefef;
+    }
+    .babies-list {
+        padding-top: 6px;
+        background: #efeff4;
+        margin-bottom: 20px;
+        .list {
+            margin-bottom: 0;
+        }
+    }
+    .list {
+        padding-top: 6px;
+        background: #efeff4;
+        .item {
+            position: relative;
+            font-size: 0.36rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-left: 16px;
+            color: #6c6c6c;
+            input::-webkit-input-placeholder {
+                color: #6c6c6c;
+            }
+            input:-moz-placeholder {
+                color: #6c6c6c;
+            }
+            input[type=text] {
+                width: 90%;
+                padding-top: 0;
+                color: #6c6c6c;
+            }
+            #file {
+                opacity: 0;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            img {
+                max-width: 1.5rem;
+                max-height: 1.5rem;
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                margin-left: 5.57rem;
+                border: 4px solid #efeff4;
+            }
+            .ion-ios-arrow-right {
+                font-size: .44rem;
+                color: #b3b3b3;
+            }
+            .camera {
+                position: absolute;
+                left: 8.2rem;
+                top: 0.4rem;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                background: #fee13f;
+                min-width: 24px;
+                min-height: 24px;
+                width: 0.33rem;
+                height: 0.33rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .icon-camera {
+                    font-size: 12px;
+                    color: #fff;
+                }
+            }
+        }
+        .address {
+            margin-top: 6px;
+        }
+    }
+    .btn-wrap {
+        display: flex;
+        width: 100%;
+        .button {
+            margin: 0 auto;
+            width: 4.53rem;
+            font-size: 0.42rem;
+        }
+    }
+}
+
+// 奖券的样式
+.ticket(@leftbg, @rightbg, @rightcolor, @bg) {
+    margin: 0 16px;
+    padding: 0.31rem 0;
+    .ticket {
+        // display: flex;
+        // margin-bottom: 0.28rem;
+        .award-wrap {
+            background: #efeff4;
+            .img-wrap {
+                padding-top: 0.22rem;
+                background: #fff;
+                .c2img1 {
+                    display: block;
+                    width: 3.68rem;
+                    height: 2.33rem;
+                    margin: 0 auto 0;
+                }
+            }
+            .list {
+                margin-bottom: 6px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    font-size: 0.36rem;
+                    padding-left: 16px;
+                    color: #a8a8a8;
+                    input[type="text"] {
+                        width: 90%;
+                    }
+                    .ion-ios-arrow-right {
+                        float: right;
+                        font-size: 0.44rem;
+                    }
+                    .icon-user,
+                    .icon-phone,
+                    .icon-address {
+                        color: #53d4ff;
+                        font-size: 0.64rem;
+                        margin-right: 10px;
+                    }
+                    .icon-address {}
+                    .icon-user {}
+                    .icon-phone {}
+                    .text-wrap {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .area {
+                            margin-right: 10px;
+                        }
+                    }
+                    .jiedao {
+                        width: 100%;
+                        span {
+                            float: right;
+                            margin-right: 10px;
+                        }
+                    }
+                    span {
+                        font-size: 0.33rem;
+                        color: #e1e1e1;
+                    }
+                    textarea {
+                        resize: none;
+                        height: 2rem;
+                    }
+                }
+                .item:first-child {
+                    border: none;
+                }
+            }
+            ion-list {
+                margin-top: 0.35rem;
+                .checkbox-icon {
+                    float: right;
+                    color: #53d4ff;
+                }
+                .list .item .item-content {
+                    span {
+                        float: left;
+                        color: #999999;
+                        font-size: 0.36rem;
+                    }
+                }
+                .checkbox input:checked+.checkbox-icon:before,
+                .checkbox input:checked:before {
+                    color: #53d4ff;
+                }
+            }
+            .button {
+                background: #53d4ff;
+                color: #fff;
+            }
+        }
+    }
+    section {
+        display: flex;
+        margin-bottom: 0.28rem;
+        .left {
+            width: 60%;
+            background: @leftbg;
+            color: #fff;
+            .son1 {
+                height: 3.36rem;
+                background: @bg;
+                background-size: 100% 100%;
+                text-align: center;
+                p {
+                    margin-bottom: 0;
+                    font-size: 0.33rem;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+                .title {
+                    font-size: 0.42rem;
+                    padding-top: 0.83rem;
+                    margin-bottom: 0.16rem;
+                }
+            }
+        }
+        .right {
+            width: 40%;
+            background: @rightbg;
+            color: #999999;
+            .son2 {
+                height: 3.36rem;
+                background: url(../img/c2awardimg2.png) no-repeat;
+                background-size: 100% 100%;
+                p {
+                    text-align: center;
+                }
+                position: relative;
+            }
+            .son3 {
+                height: 1.67rem;
+                width: 1.67rem;
+                font-size: 0.42rem;
+                border-radius: 50%;
+                margin: 0 auto;
+                position: absolute;
+                text-align: center;
+                color: @rightcolor;
+                left: 50%;
+                margin-left: -0.76rem;
+                margin-top: -1rem;
+                top: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p {
+                    width: 1.07rem;
+                    margin-bottom: 0;
+                }
+            }
+            .deadline {
+                padding-top: 2.5rem;
+                font-size: 0.31rem;
+            }
+        }
+    }
+}

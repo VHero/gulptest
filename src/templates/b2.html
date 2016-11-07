@@ -1,0 +1,24 @@
+
+  <ion-view view-title="专家指导" class="b2">
+
+  <div tabb></div>
+  <ion-content>
+  <div class="list">
+
+    <a class="item item-avatar" href="#/tab/b2-1/{{lists.id}}" ng-repeat="lists in info.lists">
+      <img ng-src="{{lists.author_avatar}}">
+      <p class="author">发布者: <span ng-bind="lists.author_name"></span></p>
+      <time ng-bind="lists.created_dt"></time>
+      <p class="list-zan"><i class="icon-zan"></i><span ng-bind="lists.like_count"></span></p>
+      <h2 ng-bind="lists.title"></h2>
+      <p class="desc" ng-bind="lists.desc"></p>
+    </a>
+  <ion-infinite-scroll
+    on-infinite="info.loadMore()"
+    distance="1%"  ng-if="!info.domore">
+    </ion-infinite-scroll>
+
+</div>
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,29 @@
+  <ion-view view-title="{{detail.content.title}}" class="b2-1">
+ <ion-header-bar align-title="center">
+  <i class="ion-chevron-left button" ng-click="goBack()"></i>
+  <h1 class="title" ng-bind="detail.content.title"></h1>
+  <i class="share button" ng-click="share()"><span></span><span></span><span></span></i>
+</ion-header-bar>
+    <ion-content>
+    <div class="article-content">
+        <div class="author">
+            <img ng-src="{{detail.content.author_avatar}}"  alt="">
+            <p class="name">发布者:<span ng-bind="detail.content.author_name"></span></p>
+            <time ng-bind-html="detail.content.created_dt"></time>
+        </div>
+        <h2 ng-bind="detail.content.title"></h2>
+        <article ng-bind-html="detail.content.desc">
+        	
+        </article>
+        <div zan>
+        	<i class="icon-zan1"></i>
+        	<span ng-bind="detail.content.like_count"></span>
+        </div>
+    </div>
+    <section class="info-content">
+            <img src="img/weixin_erweima.png" alt="" class="erweima">
+            <span class="subinfo">长按识别图中二维码<br>关注咭星坞教育平台</span>
+        </section>
+</ion-content>
+
+</ion-view>

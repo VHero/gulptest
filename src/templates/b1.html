@@ -1,0 +1,46 @@
+
+   <ion-view view-title="明星专区" class="b1">
+
+  <div tabb>
+    </div>
+  <ion-content>
+
+    <div class="personal-info padding">
+        <img src="img/b1img1.jpg" alt="" class="avatars">
+        <article class="information">
+            <p class="name">李治廷(Aarif Lee)</p>
+            <p class="year">1987年2月26日生于香港，音乐人、演员、歌手</p>
+            <p class="weibo">微博粉丝：8740271</p>
+        </article>
+
+    </div>
+    <div class="letter-wrap padding">
+        <div class="letter">
+        <h2><span><i class="icon-email"></i></span>给咭妈妈们的一封信</h2>
+            <p class="letter-content">随便复制随便一个多文化交融的家庭，母亲是中国人，
+父亲是中东和马来西亚的混血儿。外婆给他起了阿拉伯名
+Aarif，意思是博学多才，希望他将来可以出人头地。</p>
+        </div>
+    </div>
+    <div class="list card">
+  <a class="item item-body" href="#/tab/b1-1/{{lists.id}}" ng-repeat="lists in info.lists">
+    <img ng-src="{{lists.author_avatar}}" alt="" class="b1img2">
+    <h2 ng-bind="lists.title">关于李治廷的文章</h2>
+    <p class="author">by <span>玛丽先生</span></p>
+    <p class="desc" ng-bind="lists.desc">
+    </p>
+    <p>
+      <span class="subdued"><i class="ion-eye"></i><i ng-bind="lists.like_count*100">256</i></span>
+      <span class="subdued"><i class="icon-zan"></i><i ng-bind="lists.like_count"></i></span>
+    </p>
+    <p class="share"><span></span><span></span><span></span></p>
+  </a>
+  <ion-infinite-scroll
+    on-infinite="info.loadMore()"
+    distance="1%"  ng-if="!info.domore">
+    </ion-infinite-scroll>
+</div>
+
+  </ion-content>
+
+</ion-view>

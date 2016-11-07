@@ -1,0 +1,59 @@
+<ion-view view-title="我的奖赏" class="c2">
+    <div tabc>
+    </div>
+    <div tabaward></div>
+    <ion-content>
+        <div class="award-list">
+            <div class="ticket" ng-repeat="rewardslist in rewards.lists">
+                <section>
+                    <div class="left">
+                        <div class="son1">
+                            <p class="title">六一幸运大转盘</p>
+                            <p>恭喜您！</p>
+                            <p>获得 <span ng-bind="rewardslist.on_reward_id.name"></span></p>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="son2">
+                            <div class="son3" ng-click="exchange($index)">
+                                <p class="prize">立即领奖</p>
+                            </div>
+                            <p class="deadline">2016-10-01过期</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="award-wrap" ng-if="rewards.exchange[$index]">
+                    <div class="img-wrap">
+                        <img src="img/c2img1.png" alt="" class="c2img1">
+                    </div>
+                    <div class="list">
+                        <label class="item item-icon-left" href="#">
+                            <i class="icon-user"></i>
+                            <div class="text-wrap">
+                                <input type="text" placeholder="收货人" ng-model="rewards.delivery_name[$index]">
+                            </div>
+                            <i class="ion-ios-arrow-right"></i>
+                        </label>
+                        <label class="item item-icon-left" href="#">
+                            <i class="icon-phone"></i>
+                            <div class="text-wrap">
+                                <input type="text" placeholder="联系电话" ng-model="rewards.delivery_phonenum[$index]">
+                            </div>
+                            <i class="ion-ios-arrow-right"></i>
+                        </label>
+                        <label class="item item-input">
+                            <textarea placeholder="请填写详细地址，不少于5个字" ng-model="rewards.delivery_address[$index]"></textarea>
+                        </label>
+                    </div>
+                    <div class="btn-wrap padding">
+                        <button class="button button-block " ng-click="submit($index)">
+                            确认
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <ion-infinite-scroll on-infinite="rewards.loadMore()" distance="1%" ng-if="!rewards.domore">
+            </ion-infinite-scroll>
+        </div>
+    </ion-content>
+</ion-view>

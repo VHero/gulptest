@@ -1,0 +1,24 @@
+
+   <ion-view view-title="{{detail.content.title}}" class="b1-1">
+ <ion-header-bar align-title="center">
+  <i class="ion-chevron-left button" ng-click="goBack()"></i>
+  <h1 class="title" ng-bind="detail.content.title"></h1>
+  <i class="share button" ng-click="share()"><span></span><span></span><span></span></i>
+</ion-header-bar>
+    <ion-content>
+    <h2 ng-bind="detail.content.title"></h2>
+    <p class="author "><span>by<i>玛丽先生</i></span> <span><i class="ion-ios-eye-outline"></i><i class="number" ng-bind="detail.content.like_count*100"></i><i class="icon-zan"></i><i class="number" ng-bind="detail.content.like_count"></i></span></p>
+    <article class="article" ng-bind-html="detail.content.desc">
+    	
+    </article>
+    	<div zan>
+        	<i class="icon-zan1"></i>
+        	<span ng-bind="detail.content.like_count"></span>
+        </div>
+        <div class="erweima-wrap">
+        	<img src="img/weixin_erweima.png" alt="" class="erweima">
+        	<p class="title">长按识别图中二维码<br>即刻关注咭星坞公众平台</p>
+        </div>
+</ion-content>
+
+</ion-view>

@@ -1,0 +1,24 @@
+
+ <ion-view view-title="最新情报" class="a4">
+
+  <div taba>
+</div>
+  <ion-content class="">
+  
+        <p class="message"><i class="icon-11"></i>最新咭星猫情报喜欢就分享给你的好友吧!</p>
+  <div class="list">
+
+    <a class="item item-thumbnail-left" href="#/tab/a4-1/{{lists.id}}" ng-repeat="lists in info.lists">
+      <img ng-src="{{lists.author_avatar}}">
+      <h2 ng-bind="lists.title"></h2>
+      <p ng-bind="lists.desc"></p>
+      <i class="hot" ng-if=lists.is_most_popular>热门</i>
+    </a>
+    <ion-infinite-scroll
+    on-infinite="info.loadMore()"
+    distance="1%"  ng-if="!info.domore">
+    </ion-infinite-scroll>
+</div>
+  </ion-content>
+
+</ion-view>

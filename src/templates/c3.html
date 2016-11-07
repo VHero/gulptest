@@ -1,0 +1,68 @@
+
+<ion-view view-title="推广活动" class="c3">
+    <div tabc>
+    </div>
+    <ion-content>
+        <div class="wrap">
+            <img ng-if="activity.image_url" ng-src="{{activity.image_url}}" />
+            <img ng-if="!activity.image_url" src="img/background_c3.png" />
+            <div class="all activity">
+                <h3>{{activity.title}}</h3>
+                <hr />
+                <p>举办地点：<span>{{activity.location}}</span> </p>
+                <p>名额：<span>{{activity.joined_count}}</span>人 </p>
+                <p>费用：<span>{{activity.fee}} 报名人数超过{{activity.joined_count}}人，我们将抽出参加者。</span></p>
+            </div>
+            <div class="all activity_info">
+                <div class="activity_info_title">
+                    <div class="activity_info_title_left"><img src="img/activity_info.png" /></div>
+                    <div class="activity_info_title_right">活动详情</div>
+                </div>
+                <div class="activity_info_font">
+                    {{activity.desc}}
+                </div>
+            </div>
+            <div class="all sign">
+                <div class="sign_info_title">
+                    <div class="sign_info_title_left"><img src="img/sign.png" /></div>
+                    <div class="sign_info_title_right">我要报名</div>
+                </div>
+                <hr />
+                <div class="sign_info_moue">
+                    <div class="sign_info_moue_left">
+                        <img src="img/father.png" />
+                    </div>
+                    <div class="sign_info_moue_right">
+                        <p>联系人姓名：<span>{{user.nickname}}</span></p>
+                        <p>联系人电话：<span>{{user.telphone}}</span></p>
+                        <p>门票邮寄地址：<span>{{user.delivery_address}}</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="all babys">
+                <ul>
+                    <li ng-repeat=" babie in user.babies ">
+                        <div class="babys_img">
+                            <img src="img/a4_list.png" />
+                        </div>
+                        <div class="babys_wrap">
+                            <div class="babys_title">
+                                {{babie.babyname}}
+                            </div>
+                            <div class="babys_right">
+                               <!--  <i ng-if="babie.gender==1" src="img/girl.png" />
+                                <i ng-if="babie.gender==2" src="img/girl.png" /> -->
+                                <i ng-if="babie.gender==1" class="icon-man man"></i>
+                                <i ng-if="babie.gender==2" class="icon-woman woman"></i>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="foot_button">
+                <button class="btn" ng-click="TosignUp()">修改资料</button>
+                <button class="btn" ng-click="enter()">我要报名</button>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

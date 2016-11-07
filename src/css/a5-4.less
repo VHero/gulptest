@@ -1,0 +1,103 @@
+@import "base_fs.less";
+.a5-4{
+	background: #efeff4;
+	.detail-page;
+	ion-content{
+		background: #efeff4;
+	}
+	.list {
+                margin-bottom: 6px;
+                .item {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    font-size: 0.36rem;
+                    padding-left: 16px;
+                    color: #a8a8a8;
+                    input[type="text"] {
+                        width: 90%;
+                        color:#a8a8a8;
+                        padding-left: 10px;
+                    }
+                    .ion-ios-arrow-right {
+                        float: right;
+                        font-size: 0.44rem;
+                    }
+                    .icon-user,
+                    .icon-phone,
+                    .icon-address {
+                        color: #53d4ff;
+                        font-size: 0.64rem;
+                        margin-right: 10px;
+                    }
+                    .icon-address {}
+                    .icon-user {}
+                    .icon-phone {}
+                    .text-wrap {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .left-title{
+                            color: #a8a8a8;
+                        }
+                        .area {
+                            margin-right: 10px;
+                        }
+                    }
+                    .jiedao {
+                        width: 100%;
+                        span {
+                            float: right;
+                            margin-right: 10px;
+                        }
+                    }
+                    span {
+                        font-size: 0.33rem;
+                        color: #e1e1e1;
+                    }
+                    textarea {
+                        resize: none;
+                        height: 2rem;
+                    }
+                }
+                .item:first-child {
+                    border: none;
+                }
+            }
+
+
+	ion-list{
+
+		.checkbox-icon{
+			float: right;
+			color: #53d4ff;
+		}
+		.list .item .item-content{
+			span{
+				float: left;
+				color: #999999;
+				font-size: 0.36rem;
+			}
+		}
+		.checkbox input:checked+.checkbox-icon:before, .checkbox input:checked:before{
+			color: #53d4ff;
+		}
+	}
+	.btn-wrap{
+		display: flex;
+		width: 100%;
+		margin-top: 10px;
+		button{
+			margin: 0 auto;
+			background: #53d4ff;
+			color: #fff;
+			font-size: 0.42rem;
+		}
+	}
+	.checkbox input:checked+.checkbox-icon:before,
+.checkbox input:checked:before {
+	color: #53d4ff;
+	border-color: #53d4ff;
+}
+}

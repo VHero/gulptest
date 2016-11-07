@@ -1,0 +1,45 @@
+<!--<div class="a4-1">-->
+    <!--<div class="header">-->
+        <!--<img src="img/background_img.png" />-->
+    <!--</div>-->
+    <!--<div class="content">-->
+        <!--<h4 ng-bind="info.title" class="title"></h4>-->
+        <!--<div class="content-one" ng-bind-html="info.desc">-->
+        <!--</div>-->
+        <!--<div class="content-two">-->
+            <!--<h4 class="title">咭星坞平台介绍</h4>-->
+            <!--<p>全国领先的幼儿教育平台</p>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<a href="" class="sub">进入游戏</a>-->
+    <!--<b class="smalltitle">关注咭星坞教育平台</b>-->
+    <!--<div class="footer">-->
+        <!--<img src="img/weixin_erweima.png" />-->
+    <!--</div>-->
+<!--</div>-->
+
+
+ <ion-view view-title="{{detail.content.title}}" class="a4-1">
+ <ion-header-bar align-title="center">
+  <i class="ion-chevron-left button" ng-click="detail.goBack()"></i>
+  <h1 class="title" ng-bind="detail.content.title"></h1>
+  <i class="share button" ng-click="share()"><span></span><span></span><span></span></i>
+</ion-header-bar>
+    <ion-content>
+        <img src="img/background_img.png" alt="" class="header-img" ng-hide="true">
+        <section class="article-content">
+        <h2 class="article-title" ng-bind="detail.content.title"></h2>
+            <article ng-bind-html="detail.content.desc">
+                    
+            </article>
+        </section>
+        <section class="info-content">
+            <h2 class="info-title">咭星坞平台介绍</h2>
+            <article class="info-article">
+            <p>全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台,全国领先的教育平台...</p>
+            </article>
+            <img src="img/weixin_erweima.png" alt="" class="erweima">
+            <span class="subinfo">长按识别图中二维码<br>关注咭星坞教育平台</span>
+        </section>
+    </ion-content>
+</ion-view>

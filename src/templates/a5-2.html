@@ -1,0 +1,18 @@
+ <ion-view view-title="邀请好友" class="a5-2">
+ <ion-header-bar align-title="center">
+  <i class="ion-chevron-left button" ng-click="goBack()"></i>
+  <h1 class="title">我邀请的好友</h1>
+  
+</ion-header-bar>
+    <ion-content>
+<div class="list">
+
+    <a class="item item-avatar" ng-repeat="lists in info">
+      <img src="img/a5-2img1.jpg">
+      <h2 ng-bind="lists.nickname"></h2>
+		<span>已邀请</span>
+    </a>
+    
+</div>
+    </ion-content>
+</ion-view>

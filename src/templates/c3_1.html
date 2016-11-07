@@ -1,0 +1,65 @@
+
+<ion-view view-title="推广活动" class="c3-1">
+    <div tabc>
+    </div>
+    <ion-content>
+        <div class="list">
+            <a class="item  edit-info" href="javascript:;">
+                <i class="icon-edit"></i>修改资料
+            </a>
+            <label class="item item-input">
+                <span class="input-label">联系人姓名</span>
+                <input type="text">
+                <i class="ion-ios-arrow-forward"></i>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">与宝宝关系</span>
+                <input type="text">
+                <i class="ion-ios-arrow-forward"></i>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">共同参加人的名字</span>
+                <input type="text">
+                <i class="ion-ios-arrow-forward"></i>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">与宝宝的关系</span>
+                <input type="text">
+                <i class="ion-ios-arrow-forward"></i>
+            </label>
+        </div>
+        <div class="list list2">
+            <label class="item item-input">
+                <span class="input-label">联系电话</span>
+                <input type="text" ng-model="info.delivery_phonenum">
+                <i class="ion-ios-arrow-forward"></i>
+            </label>
+            <label class="item item-input">
+                <span class="input-label" ng-model="info.delivery_address">门票邮寄地址</span>
+                <input type="text">
+                <i class="ion-ios-arrow-forward"></i>
+            </label>
+        </div>
+        <div class="children-wrap">
+            <div class="list-children list" ng-repeat=" babie in babyinfo.lists ">
+                <label class="item item-input">
+                    <span class="input-label">宝宝1名字</span>
+                    <input type="text" ng-model="babie.babyname">
+                    <i class="ion-ios-arrow-forward"></i>
+                </label>
+                <a class="item item-input" ng-click="click_sex($index)">
+                    <span class="input-label">性别:<i ng-bind="babie.gender"></i></span>
+                    <i class="ion-ios-arrow-forward"></i>
+                </a>
+                <a class="item item-input" ng-click="click_date($index)">
+                    <span class="input-label">年龄:<i ng-bind="babie.birthday"></i></span>
+                    <i class="ion-ios-arrow-forward"></i>
+                </a>
+            </div>
+        </div>
+        <div class="btn-wrap">
+            <!-- <button class="button add" ng-class="{hidebtn:hide_baby_btn}" ng-click="!hide_baby_btn&&addBaby()">添加宝贝</button> -->
+            <button class="button upload" ng-click="submit()">上传资料</button>
+        </div> 
+    </ion-content>
+</ion-view>

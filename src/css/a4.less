@@ -1,0 +1,60 @@
+
+@import "base_fs";
+.a4{
+    ion-content{
+    background-color: #f0eff4;
+    .message{
+      .information;
+
+    }
+    .list{
+      padding: 0 0.2rem;
+      a.item{
+        position: relative;
+        margin-bottom: 4px;
+        border: none;
+        border: 1px solid #ecebf0;
+        border-bottom: 1px solid #d9d8dd;
+        -moz-box-shadow:0px 1px 3px #e2e1e7; -webkit-box-shadow:0px 1px 3px #e2e1e7; box-shadow:0px 1px 3px #e2e1e7;
+      }
+      .item-thumbnail-left>img:first-child{
+        border-radius: 6px;
+        max-width: 100px;
+      }
+      .item-thumbnail-left{
+        padding-left: 126px;
+        padding-right: 50px;
+      }
+      .item h2{
+        font-size: @fs_title;
+        margin-top: 0.11rem;
+        color: #6c6c6c
+      }
+      .item p{
+        margin-top: 0.31rem;
+        font-size: @fs_sub_desc;
+        color: #b8bcbf;
+        line-height: 0.58rem;
+      }
+      .item .hot{
+        position: absolute;
+        background: #ff8a00;
+        display: flex;
+        height: 0.49rem;
+        width: 2.22rem;
+        top: 0;
+        right: -0.4rem;
+        color: #fff;
+        align-items:center;
+        justify-content:center;
+        text-indent: 0.5rem;
+        font-size:0.31rem;
+        -ms-transform:rotate(39deg); /* IE 9 */
+-moz-transform:rotate(39deg); /* Firefox */
+-webkit-transform:rotate(39deg); /* Safari and Chrome */
+-o-transform:rotate(39deg); /* Opera */
+transform:rotate(39deg);
+      }
+    }
+  }
+}

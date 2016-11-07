@@ -1,0 +1,49 @@
+ <ion-view view-title="收货地址" class="a5-4">
+ <ion-header-bar align-title="center">
+  <i class="ion-chevron-left button" ng-click="goBack()"></i>
+  <h1 class="title">收货地址</h1>
+</ion-header-bar>
+    <ion-content>
+            <div class="list">
+                <label class="item item-icon-left" href="#">
+                    <i class="icon-user"></i>
+                    <div class="text-wrap">
+                        <span class="left-title">收货人:</span><input type="text" ng-model="info.delivery_name" placeholder="请输入收货人姓名">
+                    </div>
+                    <i class="ion-ios-arrow-right"></i>
+                </label>
+                <label class="item item-icon-left" href="#">
+                    <i class="icon-phone"></i>
+                    <div class="text-wrap">
+                        <span class="left-title">联系电话:</span><input type="text" ng-model="info.delivery_phonenum" placeholder="请输入联系电话">
+                    </div>
+                    <i class="ion-ios-arrow-right"></i>
+                </label>
+                <!-- <label class="item item-icon-left" href="#">
+                    <i class="icon-address"></i>
+                    <div class="text-wrap">
+                        <input type="text" placeholder="家庭地址">
+                        <span class="area">所在地区</span>
+                    </div>
+                    <i class="ion-ios-arrow-right"></i>
+                </label>
+                <label class="item item-icon-left" href="#">
+                    <div class="jiedao">
+                        <span>街道</span>
+                    </div>
+                    <i class="ion-ios-arrow-right"></i>
+                </label> -->
+                <label class="item item-input">
+                    <textarea placeholder="请填写详细地址，不少于5个字" ng-model="info.delivery_address"></textarea>
+                </label>
+            </div>
+<!--   <ion-list>
+  <ion-checkbox>设为默认</ion-checkbox>
+</ion-list> -->
+<div class="btn-wrap padding">
+<button class="button button-block " ng-click="submit()">
+  完成
+</button>
+</div>
+    </ion-content>
+</ion-view>
